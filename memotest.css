@@ -1,0 +1,35 @@
+.rectangulo{
+    width: auto;
+    height: 11vh;
+    border: 3px solid #000;
+}
+
+.azul{
+    background-color: #0d6efd;
+}
+
+.rojo{
+    background-color: #dc3545;
+}
+
+.verde{
+    background-color: #198754;
+}
+
+.violeta{
+    background-color: #6f42c1;
+}
+
+.amarillo{
+    background-color: #ffc107;
+}
+
+.naranja{
+    background-color: #fd7e14;  
+}
+.gris{
+    background-color: #adb5bd;
+}
+.oculto{
+    display: none;
+}

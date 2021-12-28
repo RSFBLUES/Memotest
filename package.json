@@ -1,0 +1,22 @@
+{
+  "name": "memotest",
+  "version": "1.0.0",
+  "description": "Juego para r/argentina programa",
+  "main": "memotest.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "RSFBLUES",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RSFBLUES/Memotest.git"
+  },
+  "bugs": {
+    "url": "https://github.com/RSFBLUES/Memotest/issues"
+  },
+  "homepage": "https://github.com/RSFBLUES/Memotest#readme",
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  }
+}
