@@ -55,7 +55,7 @@ function jugar(e){
 
         }else{
             aciertos++;
-            puntajeTotal();
+            calcularPuntajeTotal();
             rectangulos = [];
         }
     }
@@ -105,7 +105,7 @@ function terminoElJuego(){
 }
 
 //Puntaje
-function puntajeTotal(){
+function calcularPuntajeTotal(){
     puntajeTotal = puntajeTotal + puntajePorAcierto;
 }
 
