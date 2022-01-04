@@ -59,12 +59,12 @@ function jugar(e){
     }
 
     setTimeout(function(){
-        finalDelJuego();
+        revisarSiSeAcaboLaPartida();
     }, 500);
 
 }
 
-function finalDelJuego(){
+function revisarSiSeAcaboLaPartida(){
     if(aciertos === 6){
         terminoElJuego();
         puntajeTotal = 0;  
