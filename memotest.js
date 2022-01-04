@@ -1,3 +1,4 @@
+//Juego
 let colores = ["azul", "rojo", "verde", "violeta", "amarillo", "naranja", 
                "azul", "rojo", "verde", "violeta", "amarillo", "naranja"];
 let puntajeTotal = 0;
@@ -24,7 +25,7 @@ $jugar.onclick = function(){
     habilitarJugador();
 }
 
-//Habilitar botones
+//Habilitar y deshabilitar botones
 function habilitarBoton(boton){
     document.getElementById(boton).classList.remove("disabled");
 }
@@ -33,7 +34,7 @@ function deshabilitarBoton(boton){
     document.getElementById(boton).classList.add("disabled");
 }
 
-//Lógica
+//Lógica de la partida
 function jugarPartida(e){
     mostrarRectangulo(e);
     let rectangulo = asociarRectanguloGrisConElDeColor(e.target.id);
@@ -90,7 +91,7 @@ function abandonarPartida(){
         bloquearJugador();
     }
 }
-//Cambiar mensaje cuando estas jugando
+//Cambiar mensajes 
 function cambiarMensajeAlIniciarPartida(){
     const mensaje = document.querySelector("#mensaje");
     mensaje.textContent = 'Estás jugando, si quieres terminar el juego presiona el botón "abandonar".';
@@ -107,7 +108,7 @@ function calcularPuntajeTotal(){
     puntajeTotal = puntajeTotal + puntajePorAcierto;
 }
 
-//Clickear en los cuadrados grises
+//Mostras u ocultar rectangulos
 function ocultarRectangulos(color1, color2){
     setTimeout(function(){
         const $color1 = document.getElementById(color1);
@@ -144,7 +145,7 @@ function ocultarRectangulosColores(){
         rectanguloColor.classList.add("oculto");
     }
 }
-
+//Asociar rectangulos grises con los de color
 function asociarRectanguloGrisConElDeColor(rectanguloGris){
     if(rectanguloGris === "g0"){
         return "0";
@@ -173,6 +174,7 @@ function asociarRectanguloGrisConElDeColor(rectanguloGris){
     }
 }
 
+//Habilitar y bloquaer jugador
 function habilitarJugador() {
     document.querySelectorAll(".gris").forEach(element =>
         element.onclick = jugarPartida);
