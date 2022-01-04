@@ -17,7 +17,7 @@ $jugar.onclick = function(){
 
     habilitarBoton("abandonar");
 
-    estasJugando();
+    cambiarMensajeAlIniciarPartida();
 
     ordenarRectangulosAleatoriamente(colores);
 
@@ -93,7 +93,7 @@ function abandonarPartida(){
     }
 }
 //Cambiar mensaje cuando estas jugando
-function estasJugando(){
+function cambiarMensajeAlIniciarPartida(){
     const mensaje = document.querySelector("#mensaje");
     mensaje.textContent = 'Estás jugando, si quieres terminar el juego presiona el botón "abandonar".';
 }
