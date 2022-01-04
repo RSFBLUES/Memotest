@@ -66,7 +66,7 @@ function jugar(e){
 
 function revisarSiSeAcaboLaPartida(){
     if(aciertos === 6){
-        terminoElJuego();
+        cambiarMensajeAlAcabarPartida();
         puntajeTotal = 0;  
         aciertos = 0;
         rectangulos = [];
@@ -80,7 +80,7 @@ function revisarSiSeAcaboLaPartida(){
 function abandonarPartida(){
     const $abandonar = document.querySelector("#abandonar");
     $abandonar.onclick = function(){
-        terminoElJuego();
+        cambiarMensajeAlAcabarPartida();
         puntajeTotal = 0;
         aciertos = 0;
         rectangulos = [];
@@ -96,7 +96,7 @@ function cambiarMensajeAlIniciarPartida(){
     mensaje.textContent = 'Estás jugando, si quieres terminar el juego presiona el botón "abandonar".';
 }
 
-function terminoElJuego(){
+function cambiarMensajeAlAcabarPartida(){
     const mensaje = document.querySelector("#mensaje");
     let mensajeNuevo = 'Tú puntaje es ' + puntajeTotal + ', presiona el botón "jugar" para jugar de nuevo.';
     mensaje.textContent = mensajeNuevo;
