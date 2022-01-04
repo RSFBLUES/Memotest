@@ -34,7 +34,7 @@ function deshabilitarBoton(boton){
 }
 
 //Lógica
-function jugar(e){
+function jugarPartida(e){
     mostrarRectangulo(e);
     let rectangulo = asociarRectanguloGrisConElDeColor(e.target.id);
     rectangulos.push(rectangulo);
@@ -175,7 +175,7 @@ function asociarRectanguloGrisConElDeColor(rectanguloGris){
 
 function habilitarJugador() {
     document.querySelectorAll(".gris").forEach(element =>
-        element.onclick = jugar);
+        element.onclick = jugarPartida);
 }
 
 function bloquearJugador(){
