@@ -36,7 +36,7 @@ function deshabilitarBoton(boton){
 //Lógica
 function jugar(e){
     mostrarRectangulo(e);
-    let rectangulo = rectanguloColorAsociado(e.target.id);
+    let rectangulo = asociarRectanguloGrisConElDeColor(e.target.id);
     rectangulos.push(rectangulo);
 
     if(rectangulos.length === 2){
@@ -128,7 +128,7 @@ function mostrarRectangulo(e){
     const rectanguloGris = document.getElementById($rectanguloGris);
         rectanguloGris.className += " oculto";
        
-    const $rectanguloColor = rectanguloColorAsociado($rectanguloGris);
+    const $rectanguloColor = asociarRectanguloGrisConElDeColor($rectanguloGris);
     const rectanguloColor = document.getElementById($rectanguloColor);
         rectanguloColor.classList.remove("oculto");
 
@@ -145,7 +145,7 @@ function ocultarRectangulosColores(){
     }
 }
 
-function rectanguloColorAsociado(rectanguloGris){
+function asociarRectanguloGrisConElDeColor(rectanguloGris){
     if(rectanguloGris === "g0"){
         return "0";
     }else if(rectanguloGris === "g1"){
