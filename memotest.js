@@ -21,9 +21,7 @@ $jugar.onclick = function(){
 
     ordenarRectangulosAleatoriamente(colores);
 
-    juegaJugador();
-
-    
+    habilitarJugador();
 }
 
 //Habilitar botones
@@ -50,7 +48,7 @@ function jugar(e){
             ocultarRectangulos(rectangulos[0], rectangulos[1]);
             rectangulos = [];
             setTimeout(function(){
-                juegaJugador();
+                habilitarJugador();
             }, 1000);
 
         }else{
@@ -175,7 +173,7 @@ function rectanguloColorAsociado(rectanguloGris){
     }
 }
 
-function juegaJugador() {
+function habilitarJugador() {
     document.querySelectorAll(".gris").forEach(element =>
         element.onclick = jugar);
 }
