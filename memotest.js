@@ -1,6 +1,6 @@
 let colores = ["azul", "rojo", "verde", "violeta", "amarillo", "naranja", 
                "azul", "rojo", "verde", "violeta", "amarillo", "naranja"];
-let $puntajeTotal = 0;
+let puntajeTotal = 0;
 let puntajePorAcierto = 100;
 let aciertos = 0;
 let rectangulos = [];
@@ -69,7 +69,7 @@ function jugar(e){
 function finalDelJuego(){
     if(aciertos === 6){
         terminoElJuego();
-        $puntajeTotal = 0;  
+        puntajeTotal = 0;  
         aciertos = 0;
         rectangulos = [];
         ocultarRectangulosColores();
@@ -83,7 +83,7 @@ function abandonar(){
     const $abandonar = document.querySelector("#abandonar");
     $abandonar.onclick = function(){
         terminoElJuego();
-        $puntajeTotal = 0;
+        puntajeTotal = 0;
         aciertos = 0;
         rectangulos = [];
         ocultarRectangulosColores();
@@ -100,13 +100,13 @@ function estasJugando(){
 
 function terminoElJuego(){
     const mensaje = document.querySelector("#mensaje");
-    let mensajeNuevo = 'Tú puntaje es ' + $puntajeTotal + ', presiona el botón "jugar" para jugar de nuevo.';
+    let mensajeNuevo = 'Tú puntaje es ' + puntajeTotal + ', presiona el botón "jugar" para jugar de nuevo.';
     mensaje.textContent = mensajeNuevo;
 }
 
 //Puntaje
 function puntajeTotal(){
-    $puntajeTotal = $puntajeTotal + puntajePorAcierto;
+    puntajeTotal = puntajeTotal + puntajePorAcierto;
 }
 
 //Clickear en los cuadrados grises
