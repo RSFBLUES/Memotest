@@ -13,7 +13,7 @@ $jugar.onclick = function(){
 
     habilitarBoton("abandonar");
 
-    abandonar();
+    abandonarPartida();
 
     habilitarBoton("abandonar");
 
@@ -79,7 +79,7 @@ function finalDelJuego(){
     }
 }
 
-function abandonar(){
+function abandonarPartida(){
     const $abandonar = document.querySelector("#abandonar");
     $abandonar.onclick = function(){
         terminoElJuego();
