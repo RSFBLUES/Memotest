@@ -203,7 +203,7 @@ function definirRectangulos(elementos){
 
 function ordenarRectangulosAleatoriamente(elementos){
     for(let i = 0; i < elementos.length; i++){
-        let numAleatorio = Math.floor(Math.random()*12);
+        let numAleatorio = Math.floor(Math.random()*elementos.length);
         swap(elementos, i, numAleatorio);
     }
 
