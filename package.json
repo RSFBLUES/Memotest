@@ -5,7 +5,7 @@
   "main": "memotest.html",
   "scripts": {
     "test": "test",
-    "cypress-dev":"cypress open"
+    "cypress-dev": "cypress open"
   },
   "author": "RSFBLUES",
   "license": "ISC",
