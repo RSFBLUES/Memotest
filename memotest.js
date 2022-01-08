@@ -16,8 +16,6 @@ $jugar.onclick = function(){
 
     abandonarPartida();
 
-    habilitarBoton("abandonar");
-
     cambiarMensajeAlIniciarPartida();
 
     ordenarRectangulosAleatoriamente(colores);
@@ -93,14 +91,14 @@ function abandonarPartida(){
 }
 //Cambiar mensajes 
 function cambiarMensajeAlIniciarPartida(){
-    const mensaje = document.querySelector("#mensaje");
-    mensaje.textContent = 'Estás jugando, si quieres terminar el juego presiona el botón "abandonar".';
+    const $mensaje = document.querySelector("#mensaje");
+    $mensaje.textContent = 'Estás jugando, si quieres terminar el juego presiona el botón "abandonar".';
 }
 
 function cambiarMensajeAlAcabarPartida(){
-    const mensaje = document.querySelector("#mensaje");
+    const $mensaje = document.querySelector("#mensaje");
     let mensajeNuevo = 'Tú puntaje es ' + puntajeTotal + ', presiona el botón "jugar" para jugar de nuevo.';
-    mensaje.textContent = mensajeNuevo;
+    $mensaje.textContent = mensajeNuevo;
 }
 
 //Puntaje
@@ -113,36 +111,36 @@ function ocultarRectangulos(color1, color2){
     setTimeout(function(){
         const $color1 = document.getElementById(color1);
         $color1.className += " oculto";
-        const rectanguloGris1 = document.getElementById("g" + color1);
-        rectanguloGris1.classList.remove("oculto");
+        const $rectanguloGris1 = document.getElementById("g" + color1);
+        $rectanguloGris1.classList.remove("oculto");
     
         const $color2 = document.getElementById(color2);
         $color2.className += " oculto";
-        const rectanguloGris2 = document.getElementById("g" + color2);
-        rectanguloGris2.classList.remove("oculto");
+        const $rectanguloGris2 = document.getElementById("g" + color2);
+        $rectanguloGris2.classList.remove("oculto");
         },500)
 
 }
 
 function mostrarRectangulo(e){
-    const $rectanguloGris = e.target.id;
-    const rectanguloGris = document.getElementById($rectanguloGris);
-        rectanguloGris.className += " oculto";
+    const rectanguloGris = e.target.id;
+    const $rectanguloGris = document.getElementById(rectanguloGris);
+        $rectanguloGris.className += " oculto";
        
-    const $rectanguloColor = asociarRectanguloGrisConElDeColor($rectanguloGris);
-    const rectanguloColor = document.getElementById($rectanguloColor);
-        rectanguloColor.classList.remove("oculto");
+    const rectanguloColor = asociarRectanguloGrisConElDeColor(rectanguloGris);
+    const $rectanguloColor = document.getElementById(rectanguloColor);
+        $rectanguloColor.classList.remove("oculto");
 
 }
 
 function ocultarRectangulosColores(){
-    const rectangulosGrises = document.querySelectorAll(".gris");
-    rectangulosGrises.forEach(gris => 
+    const $rectangulosGrises = document.querySelectorAll(".gris");
+    $rectangulosGrises.forEach(gris => 
         gris.classList.remove("oculto"));
 
     for(let i = 0; i < 12; i++){
-        const rectanguloColor = document.getElementById(i);
-        rectanguloColor.classList.add("oculto");
+        const $rectanguloColor = document.getElementById(i);
+        $rectanguloColor.classList.add("oculto");
     }
 }
 //Asociar rectangulos grises con los de color
