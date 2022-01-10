@@ -1,10 +1,10 @@
 //Juego
-let colores = ["azul", "rojo", "verde", "violeta", "amarillo", "naranja", 
+const colores = ["azul", "rojo", "verde", "violeta", "amarillo", "naranja", 
                "azul", "rojo", "verde", "violeta", "amarillo", "naranja"];
-let puntajeTotal = 0;
-let puntajePorAcierto = 100;
-let aciertos = 0;
-let rectangulos = [];
+const puntajeTotal = 0;
+const puntajePorAcierto = 100;
+const aciertos = 0;
+const rectangulos = [];
 
 deshabilitarBoton("abandonar");
 
