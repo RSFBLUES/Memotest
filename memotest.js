@@ -182,7 +182,6 @@ function bloquearJugador(){
         element.onclick = function(){});
 }
 
-//Funciones para ordenar de forma aleatoria
 function swap(elementos, index, numAleatorio){
     let elementoGuardado = elementos[index];
     elementos[index] = elementos[numAleatorio];
