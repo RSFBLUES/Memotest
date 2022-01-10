@@ -23,7 +23,6 @@ $jugar.onclick = function(){
     habilitarJugador();
 }
 
-//Habilitar y deshabilitar botones
 function habilitarBoton(boton){
     document.getElementById(boton).classList.remove("disabled");
 }
