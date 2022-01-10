@@ -31,8 +31,7 @@ function deshabilitarBoton(boton){
     document.getElementById(boton).classList.add("disabled");
 }
 
-//Lógica de la partida
-function jugarPartida(e){
+function jugarTurno(e){
     mostrarRectangulo(e);
     let rectangulo = asociarRectanguloGrisConElDeColor(e.target.id);
     rectangulos.push(rectangulo);
@@ -174,7 +173,7 @@ function asociarRectanguloGrisConElDeColor(rectanguloGris){
 //Habilitar y bloquaer jugador
 function habilitarJugador() {
     document.querySelectorAll(".gris").forEach(element =>
-        element.onclick = jugarPartida);
+        element.onclick = jugarTurno);
 }
 
 function bloquearJugador(){
