@@ -109,11 +109,13 @@ function ocultarRectangulos(color1, color2){
     setTimeout(function(){
         const $color1 = document.getElementById(color1);
         $color1.className += " oculto";
+        color1 = color1.substring(1);
         const $rectanguloGris1 = document.getElementById("g" + color1);
         $rectanguloGris1.classList.remove("oculto");
     
         const $color2 = document.getElementById(color2);
         $color2.className += " oculto";
+        color2 = color2.substring(1);
         const $rectanguloGris2 = document.getElementById("g" + color2);
         $rectanguloGris2.classList.remove("oculto");
         },500)
@@ -137,37 +139,16 @@ function ocultarRectangulosColores(){
         gris.classList.remove("oculto"));
 
     for(let i = 0; i < 12; i++){
-        const $rectanguloColor = document.getElementById(i);
+        let idColor = "c" + i;
+        const $rectanguloColor = document.getElementById(idColor);
         $rectanguloColor.classList.add("oculto");
     }
 }
 //Asociar rectangulos grises con los de color
 function asociarRectanguloGrisConElDeColor(rectanguloGris){
-    if(rectanguloGris === "g0"){
-        return "0";
-    }else if(rectanguloGris === "g1"){
-        return "1";
-    }else if(rectanguloGris === "g2"){
-        return "2";
-    }else if(rectanguloGris === "g3"){
-        return "3";
-    }else if(rectanguloGris === "g4"){
-        return "4";
-    }else if(rectanguloGris === "g5"){
-        return "5";
-    }else if(rectanguloGris === "g6"){
-        return "6";
-    }else if(rectanguloGris === "g7"){
-        return "7";
-    }else if(rectanguloGris === "g8"){
-        return "8";
-    }else if(rectanguloGris === "g9"){
-        return "9";
-    }else if(rectanguloGris === "g10"){
-        return "10";
-    }else if(rectanguloGris === "g11"){
-        return "11";
-    }
+    let numero = rectanguloGris.substring(1);
+    let colorAsociado = "c" + numero;
+    return colorAsociado;
 }
 
 //Habilitar y bloquaer jugador
@@ -190,7 +171,8 @@ function intercambiarElementos(elementos, index, numAleatorio){
 function definirRectangulos(elementos){
     for(let i = 0; i < elementos.length; i++){
         let color = String(elementos[i]);
-        const $rectangulo = document.getElementById(String(i));
+        let idColor = "c" + i;
+        const $rectangulo = document.getElementById(idColor);
         $rectangulo.className = "rectangulo oculto";
         $rectangulo.className += " "+ color;
     }
