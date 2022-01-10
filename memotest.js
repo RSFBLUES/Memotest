@@ -108,13 +108,13 @@ function calcularPuntajeTotal(){
 function ocultarRectangulos(color1, color2){
     setTimeout(function(){
         const $color1 = document.getElementById(color1);
-        $color1.className += " oculto";
+        $color1.classList.add("oculto");
         color1 = color1.substring(1);
         const $rectanguloGris1 = document.getElementById("g" + color1);
         $rectanguloGris1.classList.remove("oculto");
     
         const $color2 = document.getElementById(color2);
-        $color2.className += " oculto";
+        $color2.classList.add("oculto");
         color2 = color2.substring(1);
         const $rectanguloGris2 = document.getElementById("g" + color2);
         $rectanguloGris2.classList.remove("oculto");
@@ -125,7 +125,7 @@ function ocultarRectangulos(color1, color2){
 function mostrarRectangulo(e){
     const rectanguloGris = e.target.id;
     const $rectanguloGris = document.getElementById(rectanguloGris);
-        $rectanguloGris.className += " oculto";
+        $rectanguloGris.classList.add("oculto");
        
     const rectanguloColor = asociarRectanguloGrisConElDeColor(rectanguloGris);
     const $rectanguloColor = document.getElementById(rectanguloColor);
@@ -174,7 +174,7 @@ function definirRectangulos(elementos){
         let idColor = "c" + i;
         const $rectangulo = document.getElementById(idColor);
         $rectangulo.className = "rectangulo oculto";
-        $rectangulo.className += " "+ color;
+        $rectangulo.classList.add(color);
     }
 }
 
