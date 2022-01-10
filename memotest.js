@@ -182,7 +182,7 @@ function bloquearJugador(){
         element.onclick = function(){});
 }
 
-function swap(elementos, index, numAleatorio){
+function intercambiarElementos(elementos, index, numAleatorio){
     let elementoGuardado = elementos[index];
     elementos[index] = elementos[numAleatorio];
     elementos[numAleatorio] = elementoGuardado;
@@ -200,7 +200,7 @@ function definirRectangulos(elementos){
 function ordenarRectangulosAleatoriamente(elementos){
     for(let i = 0; i < elementos.length; i++){
         let numAleatorio = Math.floor(Math.random()*elementos.length);
-        swap(elementos, i, numAleatorio);
+        intercambiarElementos(elementos, i, numAleatorio);
     }
 
     definirRectangulos(elementos);
