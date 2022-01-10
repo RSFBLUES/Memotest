@@ -14,7 +14,7 @@ $jugar.onclick = function(){
 
     habilitarBoton("abandonar");
 
-    abandonarPartida();
+    manejarAbandonarPartida();
 
     cambiarMensajeAlIniciarPartida();
 
@@ -75,7 +75,7 @@ function revisarSiSeAcaboLaPartida(){
     }
 }
 
-function abandonarPartida(){
+function manejarAbandonarPartida(){
     const $abandonar = document.querySelector("#abandonar");
     $abandonar.onclick = function(){
         cambiarMensajeAlAcabarPartida();
